@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displate | The Modern Canvas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Hero Background */
+        .hero-bg {
+            background-image: linear-gradient(to right, rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.4)), url('https://images.unsplash.com/photo-1618220179428-22790b46a0eb?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 font-bold text-2xl tracking-tighter text-gray-900">
+                    DISPLATE
+                </div>
+                <div class="hidden md:block">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md font-medium">How it Works</a>
+                    <a href="#cta" class="bg-blue-600 text-white px-4 py-2 rounded-md font-medium hover:bg-blue-700 transition">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-bg relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-2xl text-white">
+                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
+                    Paper is the Past. <br><span class="text-blue-400">Metal is the Future.</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-200">
+                    The 21st-century canvas. Magnet-mounted, fiercely durable, and sets up in exactly 20 seconds. No power tools. No wall damage.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#cta" class="bg-blue-600 text-center text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition transform hover:-translate-y-1 shadow-lg">
+                        Upgrade Your Space
+                    </a>
+                    <a href="#features" class="bg-white/10 backdrop-blur-md text-center text-white border border-white/30 px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition">
+                        See How It Works
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">One Canvas to Rule Them All</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">We engineered a sturdy, gallery-quality metal poster designed to withstand a lifetime of intense staring.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">⏱️</div>
+                    <h3 class="text-xl font-bold mb-2">20-Second Setup</h3>
+                    <p class="text-gray-600">Peel, stick the magnet, and snap it on. No drills, no nails, no frustration. Safe for your walls.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">🛡️</div>
+                    <h3 class="text-xl font-bold mb-2">Thick & Steel</h3>
+                    <p class="text-gray-600">Crazy durable with bent edges for safety. This isn't flimsy paper that tears or wrinkles over time.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">🎨</div>
+                    <h3 class="text-xl font-bold mb-2">Vivid & Tactile</h3>
+                    <p class="text-gray-600">Experience stunningly vivid colors and a unique tactile texture. Available in Matte, Gloss, or Textra finishes.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">🇪🇺</div>
+                    <h3 class="text-xl font-bold mb-2">Premium Quality</h3>
+                    <p class="text-gray-600">Handmade in the EU, quality checked by experts, and sealed with a hologram of authenticity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-extrabold text-blue-400 mb-2">4.3M+</div>
+                    <div class="text-gray-400">Collectors Globally</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-extrabold text-blue-400 mb-2">2M+</div>
+                    <div class="text-gray-400">Unique Artworks</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-extrabold text-blue-400 mb-2">97%</div>
+                    <div class="text-gray-400">Customer Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="py-20 bg-blue-600 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Ditch Paper?</h2>
+            <p class="text-xl text-blue-100 mb-10">Join over 4 million monthly visitors who have upgraded their living space with the ultimate metal canvas.</p>
+            <button class="bg-white text-blue-900 px-10 py-4 rounded-full font-bold text-xl hover:bg-gray-100 transition shadow-xl transform hover:scale-105" onclick="alert('This would link to your product catalog!')">
+                Shop The Collection Now
+            </button>
+        </div>
+    </section>
+
+    <footer class="bg-gray-50 border-t border-gray-200 py-10 text-center text-gray-500">
+        <p>&copy; 2026 Displate Clone Demo. For demonstration purposes.</p>
+    </footer>
+
+</body>
+</html>
