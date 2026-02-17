@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,201 +7,103 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
     <style>
-        /* Use Inter as the main font for the bold, clean look */
-        body { font-family: 'Inter', sans-serif; }
-
-        /* Custom Gradient Background for Hero and CTAs */
-        .rainbow-gradient {
-            background: linear-gradient(135deg, #ff0099, #ff6600, #ffd700, #00ff00, #0000ff, #8a2be2, #ff0099);
-            background-size: 600% 600%;
-            animation: rainbowAnimation 10s ease infinite;
-        }
-        @keyframes rainbowAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Dark Blue Overlay for readability */
-        .dark-blue-overlay {
-            background-color: rgba(0, 0, 128, 0.7);
+        body { font-family: 'Montserrat', sans-serif; }
+        
+        /* The exact color palette and diagonal sweep from your screenshot */
+        .bg-staggering-gradient {
+            background: linear-gradient(135deg, 
+                #d900ff 0%,     /* Magenta/Purple corner */
+                #ff0000 15%,    /* Red */
+                #ff7b00 30%,    /* Orange */
+                #ccff00 45%,    /* Yellow/Lime */
+                #0088ff 65%,    /* Bright Blue */
+                #000088 85%,    /* Deep Blue */
+                #000033 100%    /* Navy corner */
+            );
+            background-attachment: fixed;
         }
 
-        /* Section Backgrounds */
-        .section-bg-dark {
-            background-color: #000033; /* Deep dark blue */
+        /* Recreating the Displate Logo visually */
+        .logo-cursive {
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            line-height: 0.8;
+            letter-spacing: 1px;
         }
-        .section-bg-gradient {
-            background: linear-gradient(to right, #000033, #000066);
-        }
-
-        /* Feature Cards */
-        .feature-card {
-            background-color: #00004d;
-            border: 2px solid transparent;
-            background-clip: padding-box;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        .feature-card:before {
-            content: '';
-            position: absolute;
-            top: -2px; bottom: -2px;
-            left: -2px; right: -2px;
-            background: linear-gradient(135deg, #ff0099, #ff6600, #ffd700, #00ff00, #0000ff, #8a2be2, #ff0099);
-            z-index: -1;
-            border-radius: 1rem;
-            transition: all 0.3s ease;
-            opacity: 0;
-        }
-        .feature-card:hover:before {
-            opacity: 1;
-        }
-
-        /* Button Styles */
-        .btn-rainbow {
-            background: linear-gradient(135deg, #0000ff, #8a2be2);
-            color: white;
-            transition: all 0.3s ease;
-        }
-        .btn-rainbow:hover {
-            background: linear-gradient(135deg, #8a2be2, #ff0099);
-            transform: scale(1.05);
-        }
-        .btn-outline-white {
-            border: 2px solid white;
-            color: white;
-            transition: all 0.3s ease;
-        }
-        .btn-outline-white:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: white;
-        }
-
-        /* Logo Font */
-        .logo-font {
+        .logo-sub {
             font-weight: 900;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
-        /* Title Color from Palette */
-        .title-color { color: #0000ff; } /* Vibrant Blue */
+        /* Massive Typography */
+        .text-massive {
+            font-size: clamp(4rem, 10vw, 8rem);
+            line-height: 1;
+            font-weight: 900;
+        }
+
+        /* Stark White Glassmorphism for contrast */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
     </style>
 </head>
-<body class="section-bg-dark text-white font-sans antialiased">
+<body class="bg-staggering-gradient text-white min-h-screen flex flex-col antialiased">
 
-    <nav class="bg-transparent fixed w-full z-50 top-0 left-0 border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <div class="flex flex-col text-center">
-                        <span class="logo-font text-4xl">DISPLATE</span>
-                        <span class="text-xs uppercase tracking-wider text-white/80 font-bold">Metal Posters</span>
-                    </div>
-                </div>
-                <div class="hidden md:block">
-                    <a href="#features" class="text-white hover:text-blue-400 px-3 py-2 rounded-md font-bold tracking-wide transition">How it Works</a>
-                    <a href="#cta" class="btn-rainbow px-5 py-3 rounded-md font-bold tracking-wide shadow-lg hover:shadow-xl ml-4">Shop Now</a>
-                </div>
-            </div>
+    <nav class="w-full pt-8 pb-4 flex justify-center z-50">
+        <div class="flex flex-col items-center text-white drop-shadow-md">
+            <span class="logo-cursive">Displate</span>
+            <span class="logo-sub mt-1">Metal Posters</span>
         </div>
     </nav>
 
-    <div class="rainbow-gradient relative pt-36 pb-28 lg:pt-56 lg:pb-40 flex items-center min-h-screen overflow-hidden">
-        <div class="dark-blue-overlay absolute inset-0"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="max-w-4xl text-white text-center mx-auto">
-                <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight mb-6 leading-tight">
-                    PAPER IS THE PAST. <br>
-                    <span class="title-color" style="color: #00c6ff;">METAL IS THE FUTURE.</span>
-                </h1>
-                <p class="text-2xl md:text-3xl mb-12 text-gray-200 font-light">
-                    The 21st-century canvas. Magnet-mounted, fiercely durable, and sets up in exactly 20 seconds. No power tools. No wall damage.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="#cta" class="btn-rainbow text-center px-10 py-5 rounded-full font-extrabold text-xl shadow-2xl">
-                        UPGRADE YOUR SPACE
-                    </a>
-                    <a href="#features" class="btn-outline-white text-center px-10 py-5 rounded-full font-extrabold text-xl backdrop-blur-md">
-                        SEE HOW IT WORKS
-                    </a>
-                </div>
-                <div class="mt-16 text-white/50 text-lg font-bold">2026-02-12</div>
-            </div>
+    <main class="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 text-center relative z-10 py-20">
+        
+        <h1 class="text-massive drop-shadow-2xl mb-6">
+            PAPER IS<br>THE PAST.
+        </h1>
+        
+        <p class="text-2xl md:text-4xl font-bold mb-12 drop-shadow-lg max-w-4xl lowercase">
+            the 21st century canvas. magnet-mounted in 20 seconds.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-6 w-full max-w-2xl justify-center">
+            <a href="#shop" class="bg-white text-blue-900 px-10 py-6 rounded-full font-black text-2xl uppercase tracking-widest hover:scale-105 transition-transform shadow-[0_0_40px_rgba(255,255,255,0.4)]">
+                Upgrade Space
+            </a>
+            <a href="#features" class="glass-panel text-white px-10 py-6 rounded-full font-bold text-2xl uppercase tracking-widest hover:bg-white hover:text-blue-900 transition-all">
+                See How
+            </a>
         </div>
-    </div>
+    </main>
 
-    <section id="features" class="py-28 section-bg-dark border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">ONE CANVAS TO RULE THEM ALL</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">We engineered a sturdy, gallery-quality metal poster designed to withstand a lifetime of intense staring.</p>
+    <section id="features" class="py-20 bg-black/20 backdrop-blur-sm border-t border-white/20">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div>
+                <div class="text-5xl font-black mb-4">20s</div>
+                <h3 class="text-2xl font-bold mb-2">Setup Time</h3>
+                <p class="text-white/80 font-medium">No power tools. No damage.</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                <div class="feature-card p-8 rounded-2xl text-white transition transform hover:-translate-y-2 hover:shadow-2xl">
-                    <div class="w-16 h-16 btn-rainbow rounded-full flex items-center justify-center mb-6 text-3xl font-bold">⏱️</div>
-                    <h3 class="text-2xl font-bold mb-4">20-Second Setup</h3>
-                    <p class="text-gray-300">Peel, stick the magnet, and snap it on. No drills, no nails, no frustration. Safe for your walls.</p>
-                </div>
-                <div class="feature-card p-8 rounded-2xl text-white transition transform hover:-translate-y-2 hover:shadow-2xl">
-                    <div class="w-16 h-16 btn-rainbow rounded-full flex items-center justify-center mb-6 text-3xl font-bold">🛡️</div>
-                    <h3 class="text-2xl font-bold mb-4">Thick & Steel</h3>
-                    <p class="text-gray-300">Crazy durable with bent edges for safety. This isn't flimsy paper that tears or wrinkles over time.</p>
-                </div>
-                <div class="feature-card p-8 rounded-2xl text-white transition transform hover:-translate-y-2 hover:shadow-2xl">
-                    <div class="w-16 h-16 btn-rainbow rounded-full flex items-center justify-center mb-6 text-3xl font-bold">🎨</div>
-                    <h3 class="text-2xl font-bold mb-4">Vivid & Tactile</h3>
-                    <p class="text-gray-300">Experience stunningly vivid colors and a unique tactile texture. Available in Matte, Gloss, or Textra finishes.</p>
-                </div>
-                <div class="feature-card p-8 rounded-2xl text-white transition transform hover:-translate-y-2 hover:shadow-2xl">
-                    <div class="w-16 h-16 btn-rainbow rounded-full flex items-center justify-center mb-6 text-3xl font-bold">🇪🇺</div>
-                    <h3 class="text-2xl font-bold mb-4">Premium Quality</h3>
-                    <p class="text-gray-300">Handmade in the EU, quality checked by experts, and sealed with a hologram of authenticity.</p>
-                </div>
+            <div>
+                <div class="text-5xl font-black mb-4">EU</div>
+                <h3 class="text-2xl font-bold mb-2">Handmade</h3>
+                <p class="text-white/80 font-medium">Thick steel. Quality checked.</p>
+            </div>
+            <div>
+                <div class="text-5xl font-black mb-4">∞</div>
+                <h3 class="text-2xl font-bold mb-2">Swappable</h3>
+                <p class="text-white/80 font-medium">Easy to set up, switch, combine.</p>
             </div>
         </div>
     </section>
-
-    <section class="py-24 section-bg-gradient border-y border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
-                <div class="py-8 md:py-0">
-                    <div class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-2">4.3M+</div>
-                    <div class="text-xl text-gray-300 font-bold uppercase tracking-wider">Collectors Globally</div>
-                </div>
-                <div class="py-8 md:py-0">
-                    <div class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500 mb-2">2M+</div>
-                    <div class="text-xl text-gray-300 font-bold uppercase tracking-wider">Unique Artworks</div>
-                </div>
-                <div class="py-8 md:py-0">
-                    <div class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-green-500 mb-2">97%</div>
-                    <div class="text-xl text-gray-300 font-bold uppercase tracking-wider">Customer Satisfaction</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="cta" class="py-32 section-bg-dark text-center relative overflow-hidden">
-        <div class="absolute inset-0 rainbow-gradient opacity-20 mix-blend-overlay pointer-events-none"></div>
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <h2 class="text-5xl md:text-7xl font-extrabold text-white mb-8 leading-tight">READY TO DITCH PAPER?</h2>
-            <p class="text-2xl text-gray-200 mb-14 font-light max-w-3xl mx-auto">Join over 4 million monthly visitors who have upgraded their living space with the ultimate metal canvas.</p>
-            <button class="btn-rainbow text-white px-12 py-6 rounded-full font-extrabold text-2xl hover:shadow-2xl transform hover:scale-105 transition shadow-xl" onclick="alert('This would link to your product catalog!')">
-                SHOP THE COLLECTION NOW
-            </button>
-        </div>
-    </section>
-
-    <footer class="section-bg-dark border-t border-white/10 py-12 text-center text-gray-400 font-medium">
-        <p>&copy; 2026 Displate Clone Demo. For demonstration purposes. <span class="block mt-2 text-sm text-white/50">Inspired by the original Displate design.</span></p>
-    </footer>
 
 </body>
 </html>
-
-```
